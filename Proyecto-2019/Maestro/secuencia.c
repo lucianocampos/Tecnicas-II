@@ -554,8 +554,8 @@ void algoritmo_tabla(int const *tabla, int tam, float vel ){
 
 int serie (int const *tabla, int tam, float vel ){						/* devuelve 1 por error y 0 por finalización correcta */
 	
-	int i=0, puerto, dato_in;											/* dato_in integer recibido por serie */
-	char dato_enviado, dato_recibido;									/* dato_recibido char recibido por serie */
+	int i=0, puerto/*, dato_in*/;											/* dato_in integer recibido por serie */
+	char dato_enviado/*, dato_recibido*/;									/* dato_recibido char recibido por serie */
 	
 	char monitor = 'p';
 	
@@ -570,9 +570,9 @@ int serie (int const *tabla, int tam, float vel ){						/* devuelve 1 por error 
 			i++;
 			if(i==tam) i=0;
 			
-			delay(vel);													/* delay entre envio y recepcion para la misma raspberry */
+			delay(vel);													
 			
-			if(serialDataAvail (puerto)){
+	/*		if(serialDataAvail (puerto)){
 				
 				dato_recibido = serialGetchar(puerto);
 				dato_in = dato_recibido;
@@ -588,7 +588,7 @@ int serie (int const *tabla, int tam, float vel ){						/* devuelve 1 por error 
 				}
 				refresh();
 			}
-							
+	*/						
 			monitor = getch();
 					
 		}while( (monitor!= 'e') && (monitor != 'u') && (monitor != 'd'));
