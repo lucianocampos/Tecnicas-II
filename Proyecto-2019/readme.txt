@@ -1,1 +1,1 @@
-La función serie está escrita para enviar y recibir sobre una misma raspberry conectando TX con RX, para comunicar dos Pi distintas comentar todo entre delay(vel) y ely el getch() en dicha función (todo en SECUENCIA.C)
+La función "serie" está escrita para enviar y recibir sobre una misma raspberry conectando TX con RX, para comunicar dos Pi distintas comentar todo entre delay(vel) y ely el getch() en dicha función (todo en SECUENCIA.C)
